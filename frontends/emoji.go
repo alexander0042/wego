@@ -6,9 +6,9 @@ import (
 	"math"
 	"time"
 
+	"github.com/alienscience/wego/iface"
 	colorable "github.com/mattn/go-colorable"
 	runewidth "github.com/mattn/go-runewidth"
-	"github.com/schachmat/wego/iface"
 )
 
 type emojiConfig struct {
@@ -95,8 +95,8 @@ func (c *emojiConfig) formatCond(cur []string, cond iface.Cond, current bool) (r
 
 func (c *emojiConfig) printDay(day iface.Day) (ret []string) {
 	desiredTimesOfDay := []time.Duration{
-		8 * time.Hour,
-		12 * time.Hour,
+		9 * time.Hour,
+		14 * time.Hour,
 		19 * time.Hour,
 		23 * time.Hour,
 	}
@@ -129,7 +129,7 @@ func (c *emojiConfig) printDay(day iface.Day) (ret []string) {
 	ret = append([]string{
 		"                            ┌───────┐ ",
 		"┌───────────────┬───────────" + dateFmt + "───────────┬───────────────┐",
-		"│    Morning    │    Noon   └───┬───┘ Evening   │     Night     │",
+		"│    Morning    │ Afternoon └───┬───┘ Evening   │     Night     │",
 		"├───────────────┼───────────────┼───────────────┼───────────────┤"},
 		ret...)
 	return append(ret,

@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
+	"github.com/alienscience/wego/iface"
 	"github.com/mattn/go-colorable"
 	"github.com/mattn/go-runewidth"
-	"github.com/schachmat/wego/iface"
 )
 
 type aatConfig struct {
@@ -62,7 +62,8 @@ func (c *aatConfig) formatTemp(cond iface.Cond) string {
 			}
 		}
 		t, _ := c.unit.Temp(temp)
-		return fmt.Sprintf("\033[38;5;%03dm%d\033[0m", col, int(t))
+		tint := int(math.Round(float64(t)))
+		return fmt.Sprintf("\033[38;5;%03dm%d\033[0m", col, tint)
 	}
 
 	_, u := c.unit.Temp(0.0)
@@ -321,8 +322,8 @@ func (c *aatConfig) formatGeo(coords *iface.LatLon) (ret string) {
 
 func (c *aatConfig) printDay(day iface.Day) (ret []string) {
 	desiredTimesOfDay := []time.Duration{
-		8 * time.Hour,
-		12 * time.Hour,
+		9 * time.Hour,
+		14 * time.Hour,
 		19 * time.Hour,
 		23 * time.Hour,
 	}
@@ -355,7 +356,7 @@ func (c *aatConfig) printDay(day iface.Day) (ret []string) {
 	ret = append([]string{
 		"                                                       ┌─────────────┐                                                       ",
 		"┌──────────────────────────────┬───────────────────────" + dateFmt + "───────────────────────┬──────────────────────────────┐",
-		"│           Morning            │             Noon      └──────┬──────┘    Evening            │            Night             │",
+		"│           Morning            │           Afternoon   └──────┬──────┘    Evening            │            Night             │",
 		"├──────────────────────────────┼──────────────────────────────┼──────────────────────────────┼──────────────────────────────┤"},
 		ret...)
 	return append(ret,

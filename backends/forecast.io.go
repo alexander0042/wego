@@ -10,7 +10,7 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/schachmat/wego/iface"
+	"github.com/alienscience/wego/iface"
 )
 
 type forecastConfig struct {

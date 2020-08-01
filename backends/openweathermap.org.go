@@ -4,13 +4,14 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"github.com/schachmat/wego/iface"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"regexp"
 	"strings"
 	"time"
+
+	"github.com/alienscience/wego/iface"
 )
 
 type openWeatherConfig struct {
@@ -52,7 +53,7 @@ type dataBlock struct {
 }
 
 const (
-	openweatherURI = "http://api.openweathermap.org/data/2.5/forecast?%s&appid=%s&units=metric&lang=%s"
+	openweatherURI = "https://api.openweathermap.org/data/2.5/forecast?%s&appid=%s&units=metric&lang=%s"
 )
 
 func (c *openWeatherConfig) Setup() {
