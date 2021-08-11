@@ -9,9 +9,9 @@ import (
 	"strconv"
 	"strings"
 
-	_ "github.com/alienscience/wego/backends"
-	_ "github.com/alienscience/wego/frontends"
-	"github.com/alienscience/wego/iface"
+	_ "github.com/alexander0042/wego/backends"
+	_ "github.com/alexander0042/wego/frontends"
+	"github.com/alexander0042/wego/iface"
 	"github.com/schachmat/ingo"
 )
 

@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/alienscience/wego/iface"
+	"github.com/alexander0042/wego/iface"
 	"github.com/mattn/go-colorable"
 	"github.com/mattn/go-runewidth"
 )

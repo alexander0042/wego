@@ -1,4 +1,4 @@
-module github.com/alienscience/wego
+module github.com/alexander0042/wego
 
 go 1.14
 

@@ -10,7 +10,7 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/alienscience/wego/iface"
+	"github.com/alexander0042/wego/iface"
 )
 
 type forecastConfig struct {
@@ -55,7 +55,7 @@ const (
 	// see https://developer.forecast.io/docs/v2
 	// see also https://github.com/mlbright/forecast
 	//https://api.forecast.io/forecast/APIKEY/LATITUDE,LONGITUDE
-	forecastWuri = "https://api.forecast.io/forecast/%s/%s?units=ca&lang=%s&exclude=minutely,alerts,flags&extend=hourly"
+	forecastWuri = "https://api.pirateweather.net/forecast/%s/%s?units=ca&lang=%s&exclude=minutely,alerts,flags&extend=hourly"
 )
 
 func (c *forecastConfig) parseAstro(cur *iface.Day, days []forecastDataPoint) {
@@ -287,5 +287,5 @@ func (c *forecastConfig) Fetch(location string, numdays int) iface.Data {
 }
 
 func init() {
-	iface.AllBackends["forecast.io"] = &forecastConfig{}
+	iface.AllBackends["pirateweather"] = &forecastConfig{}
 }
