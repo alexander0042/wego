@@ -22,6 +22,7 @@
   [1.5](https://golang.org/doc/go1.5) environment (You can use
   [goenv](https://github.com/pwoolcoc/goenv) if your distribution does not
   support Go 1.5 yet)
+  * In Ubuntu, this is a straightforward: `sudo apt install golang-go`
 * utf-8 terminal with 256 colors
 * A sane monospaced font containing all the required runes (I use `dejavu sans
   mono`)
@@ -29,14 +30,16 @@
 
 ## Installation
 
-To install or update the wego binary into your `$GOPATH` as usual, run:
+* Since recent go versions do not have a , it can be manually set with `export GOPATH="$HOME/go"`
+* The, to install or update the wego binary into your `$GOPATH`, run:
 ```shell
 go get -u github.com/alexander0042/wego
 ```
+* Wego can then be launched with `~/go/bin/wego`!
 
 ## Setup
 
-0. Run `wego` once. You will get an error message, but the `.wegorc` config file
+0. Run `~/go/bin/wego` once. You will get an error message, but the `.wegorc` config file
    will be generated in your `$HOME` directory (it will be hidden in some file
    managers due to the filename starting with a dot).
 0. __With a [forecast.io](http://forecast.io/) account__ (new default)
