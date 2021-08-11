@@ -63,6 +63,14 @@ go get -u github.com/alienscience/wego
       location=New York
       wwo-api-key=YOUR_WORLDWEATHERONLINE_API_KEY_HERE
     ```
+0. __With a [pirateweather.net](https://pirateweather.net/) account__
+    * Create your account on https://developer.forecast.io/register
+    * Update the following `.wegorc` config variables to fit your needs:
+    ```
+      backend=pirateweather
+      location=40.748,-73.985
+      forecast-api-key=PIRATEWEATHER.NET.IO_API_KEY_HERE
+    ```
 0. You may want to adjust other preferences like `days`, `units` and `…-lang` as
    well. Save the file.
 0. Run `wego` once again and you should get the weather forecast for the current
@@ -75,12 +83,6 @@ go get -u github.com/alienscience/wego
 
 You can set the `$WEGORC` environment variable to override the default config
 file location.
-
-## Todo
-
-* more [backends and frontends](https://github.com/alienscience/wego/wiki/How-to-write-a-new-backend-or-frontend)
-* resolve ALL the [issues](https://github.com/alienscience/wego/issues)
-* don't forget the [TODOs in the code](https://github.com/alienscience/wego/search?q=TODO&type=Code)
 
 ## License - ISC
 
