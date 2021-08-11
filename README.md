@@ -72,11 +72,11 @@ go get -u github.com/alexander0042/wego
     ```
       backend=pirateweather
       location=40.748,-73.985
-      forecast-api-key=PIRATEWEATHER.NET.IO_API_KEY_HERE
+      forecast-api-key=PIRATEWEATHER.NET_API_KEY_HERE
     ```
 0. You may want to adjust other preferences like `days`, `units` and `…-lang` as
    well. Save the file.
-0. Run `wego` once again and you should get the weather forecast for the current
+0. Run `~/go/bin/wego` once again and you should get the weather forecast for the current
    and next few days for your chosen location.
 0. If you're visiting someone in e.g. London over the weekend, just run `wego 4
    London` or `wego London 4` (the ordering of arguments makes no difference) to
