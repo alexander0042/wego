@@ -64,7 +64,7 @@ go get -u github.com/alexander0042/wego
       wwo-api-key=YOUR_WORLDWEATHERONLINE_API_KEY_HERE
     ```
 0. __With a [pirateweather.net](https://pirateweather.net/) account__
-    * Create your account on https://developer.forecast.io/register
+    * Create your account on https://pirateweather.net
     * Update the following `.wegorc` config variables to fit your needs:
     ```
       backend=pirateweather
